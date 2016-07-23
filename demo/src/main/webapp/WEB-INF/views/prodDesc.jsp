@@ -47,6 +47,44 @@ $(document).ready(function(){
   </div>
 
 </nav> 
+<!-- mainbody -->
+
+<div class="span9 center margin-bottom"> 
+					<h3>Product Details</h3>
+					</div>
+        <div class="container" ng-app = "addToCartApp">
+                <div class="row">
+	 <div class="span3">
+		<img src="<c:url value="/resources/images/${item.itemId}.png" /> " alt="image"/>
+	</div>	 
+	  
+	<div class="span5">
+
+		<div class="spanAddress">
+			<address>
+				<strong>Name:</strong> <span>${listed.name}</span><br>
+				
+				<strong>Manufacturer:</strong> <span>${listed.}</span><br>
+				<strong>Category:</strong> <span>${listed.category}</span><br>
+				<strong>Color:</strong> <span>${listed.price}</span><br>
+	</address>
+		</div>	
+				
+		<div class="span6">
+			<h2>
+				<strong>Price: Rs. ${listed.price}</strong> <br><br>
+			</h2>
+		</div>
+
+
+<a href="yourcart">Add to Cart</a>
+
+
+
+
+
+
+
 
 
 

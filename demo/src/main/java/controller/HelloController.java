@@ -23,6 +23,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+
+import com.google.gson.Gson;
  
 
 @EnableWebMvc
@@ -213,6 +215,21 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 		    public String logout(ModelMap model) {
 		        return "logout";
 		    }
+		    
+		    
+		    
+		    //json productTableUsers
+		    @RequestMapping(value="/productTableUsers")
+		    public ModelAndView showproductTableUsers()
+			{
+				List<Product> listtojsp=new ArrayList<Product>();
+				listtojsp=productService.listProduct();
+				String json = new Gson().toJson(listtojsp);  // converting list into Google Gson object which is a string
+				System.out.println(json);
+				ModelAndView mv=new ModelAndView("productTableUsers");
+				mv.addObject("myJson", json);
+				return mv;
+			}
 		   
 		}
 		   

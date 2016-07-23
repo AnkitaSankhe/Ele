@@ -11,8 +11,9 @@ http://www.springframework.org/schema/security/spring-security-4.0.xsd">
 	<http auto-config="true">
 
 		<intercept-url pattern="/addproduct/**" access="hasRole('ROLE_ADMIN')" />
+		<intercept-url pattern="/productTableUsers/**" access="hasRole('ROLE_USER')" />
 		
-		<form-login login-page="/login" default-target-url="/addproduct" login-processing-url="/perform_login" authentication-failure-url="/accessdenied" always-use-default-target="false"/>
+		<form-login login-page="/login" default-target-url="/addproduct" login-processing-url="/perform_login" authentication-failure-url="/productTableUsers" always-use-default-target="false"/>
 </http>
 		
 	<!-- <form-login  

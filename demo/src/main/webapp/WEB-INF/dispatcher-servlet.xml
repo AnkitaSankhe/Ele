@@ -44,4 +44,32 @@ http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
 		<property name="maxUploadSize" value="100000" />
 
 	</bean>
-</beans>
+	
+	<!-- 
+	 Web flow configs 
+        
+        <webflow:flow-registry id="flowRegistry" flow-builder-services="flowBuilderServices" base-path="/WEB-INF/webflow">
+        
+             <webflow:flow-location path="/WEB-INF/userCheckoutFlow.xml" />
+        </webflow:flow-registry>
+ 
+        <webflow:flow-executor id="flowExecutor" flow-registry="flowRegistry" />
+ 
+ 
+        Enables FlowHandler URL mapping
+        <bean class="org.springframework.webflow.mvc.servlet.FlowHandlerAdapter">
+             <property name="flowExecutor" ref="flowExecutor" />
+        </bean>
+ 
+        <webflow:flow-builder-services id="flowBuilderServices" view-factory-creator="mvcViewFactoryCreator"/>
+ 
+                <bean id="mvcViewFactoryCreator" class="org.springframework.webflow.mvc.builder.MvcViewFactoryCreator">
+                      <property name="viewResolvers" ref="myViewResolver"/>
+                </bean>
+  
+        Maps request paths to flows in the flowRegistry;           
+        <bean class="org.springframework.webflow.mvc.servlet.FlowHandlerMapping">
+            <property name="flowRegistry" ref="flowRegistry"/>
+            <property name="order" value="0"/>
+        </bean> -->
+	</beans>
