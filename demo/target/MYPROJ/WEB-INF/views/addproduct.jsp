@@ -123,7 +123,7 @@ $(document).ready(function(){
       
 <div align="left" style="color:#0000FF;background:pink;">
   <br/> <br/>
- <form  method="post" action="./upload?${_csrf.parameterName}=${_csrf.token}" enctype="multipart/form-data">
+ <form  method="post" action="./FileUploadSuccess?${_csrf.parameterName}=${_csrf.token}" enctype="multipart/form-data">
        
        <label><spring:message text="File to upload"></spring:message></label>  
        <input type="file" name="file">   

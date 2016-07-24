@@ -85,6 +85,8 @@
     </a>
   </div>
 </div>
+
+<a href="recommendfreind">Recommend To Friend</a>
 <nav class="navbar navbar-inverse navbar-fixed-bottom">
   <div class="container-fluid">
     <div class="navbar-header">

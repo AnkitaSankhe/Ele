@@ -76,9 +76,7 @@
            </tr>  
            <tr ng-repeat="listed in products | orderBy:predicate:reverse | filter:paginate| filter:search" ng-class-odd="'odd'">  
              <td>  
-               <button class="btn">  
-                 ProductDetails  
-               </button>  
+              <a href="productdescription"> ProductDetails   </a>  
              </td>
              <td>{{ listed.id}}</td>  
              <td>{{ listed.name}}</td>  

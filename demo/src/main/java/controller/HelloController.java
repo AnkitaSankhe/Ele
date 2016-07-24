@@ -7,11 +7,15 @@ import Model.*;
 
 import java.util.*;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
 import java.io.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.mail.MailSender;
+import org.springframework.mail.SimpleMailMessage;
+import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.ui.Model;
@@ -30,22 +34,54 @@ import com.google.gson.Gson;
 @EnableWebMvc
 	@Controller
 	public class HelloController  {
-		
+	@Autowired
+	private JavaMailSender mailSender;
 		@Autowired
 		  public productServices productService;
+		
 		
 		@Qualifier(value="productService")
 	    public void setPersonService(productServices ps){
 	        this.productService = ps;
 	    }
 		
-		/*@RequestMapping("/productpage")
-	    public String dispproductpage()
+		@RequestMapping("/productdescription")
+	    public String productDetails()
 	    {
-	    	return "productpage";
-	    }(*/
+	    	return "productdescription";
+	    }
+		@RequestMapping("/recommendfreind")
+	    public String showrecommendfreind()
+	    {
+	    	return "recommendfreind";
+	    }
 		
-		
+		@RequestMapping(value="/sendEmail", method = RequestMethod.POST)
+		    public String doSendEmail(HttpServletRequest request) {
+		        // takes input from e-mail form
+		        String recipientAddress = request.getParameter("email");
+		        String fname=request.getParameter("first_name");
+		        String subject ="musichub :: Your Friend Recommends..." +request.getParameter("musichub alert");
+		        String message = request.getParameter("comments");
+		        String finalmessage="Hi "+fname+", "+" "+message+"!!! "+"Check this out!!!";
+		         
+		        // prints debug info
+		        System.out.println("To: " + recipientAddress);
+		        System.out.println("Subject: " + subject);
+		        System.out.println("Message: " + finalmessage);
+		         
+		        // creates a simple e-mail object
+		        SimpleMailMessage email = new SimpleMailMessage();
+		        email.setTo(recipientAddress);
+		        email.setSubject(subject);
+		        email.setText(finalmessage);
+		         
+		        // sends the e-mail
+		        mailSender.send(email);
+		         
+		        // forwards to the view named "Result"
+		        return "redirect:/productTableUsers";
+		 }
 		
 		@RequestMapping("/")
 	    public String showIndex()

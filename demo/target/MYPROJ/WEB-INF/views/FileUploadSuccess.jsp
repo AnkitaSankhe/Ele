@@ -7,7 +7,6 @@
 <title>Success</title>
 </head>
 <body>
-FileName : "
-	<strong> ${fileName} </strong>" - Uploaded Successful.
+FileUploaded Successfully
 </body>
 </html>

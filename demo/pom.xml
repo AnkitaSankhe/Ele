@@ -286,6 +286,12 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     <version>2.2.4</version>
 </dependency> 
     
+   <!-- https://mvnrepository.com/artifact/org.springframework/spring-context-support -->
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-context-support</artifactId>
+    <version>3.2.0.RELEASE</version>
+</dependency>
   </dependencies>
 
 
