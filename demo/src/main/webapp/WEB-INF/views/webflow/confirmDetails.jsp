@@ -10,17 +10,23 @@
 	</head>
  
 	<body>
+		<%@include file="/WEB-INF/views/header.jsp" %>
+	
 		<div class="content">
 			<fieldset>
 				<legend>Confirm Details</legend>
 				<!-- for triggering webflow events using links,
 					 the eventId to be triggered is given in "href" attribute as:
 				 -->
-				<a href="${flowExecutionUrl}">Home</a><br /><br />
+				<br >
 				<p>You have entered </p>
 				<sf:form modelAttribute="userBean">
 					<sf:label path="qty">Quantity:</sf:label>${userBean.getQty()}
-					<input name="_eventId_submit" type="submit" value="Confirm Details" />
+					<br>
+					<sf:label path="qty">Total Amount:</sf:label>${userBean.getQty()*5999}
+					<br>
+					<br>
+					<input name="_eventId_submit" type="submit" value="Confirm & Proceed" />
 				</sf:form>	
 				
 				<%-- <sf:form modelAttribute="userBean">
@@ -38,5 +44,8 @@
 				<%-- </sf:form> --%>
 			</fieldset>
 		</div>
+			<br>
+<br>
+<%@include file="/WEB-INF/views/footer.jsp"%>
 	</body>
 </html>

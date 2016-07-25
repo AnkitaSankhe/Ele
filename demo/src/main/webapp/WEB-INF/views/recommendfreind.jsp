@@ -2,10 +2,14 @@
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
+<body style="background-color: #ccffbb;">
+		
+
 <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
         <div class="modal-content">
         <div class="modal-header">
+        
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
             <h4 class="modal-title">Recommend a Friend</h4>
         </div>
@@ -48,6 +52,7 @@
         </div><!-- End of Modal content -->
         </div><!-- End of Modal dialog -->
     </div>
-			
+			<br>
+<br>
 </body>
 </html>

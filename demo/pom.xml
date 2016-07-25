@@ -286,12 +286,23 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     <version>2.2.4</version>
 </dependency> 
     
+    
+     <!-- ==========javamail dependencies================= -->
    <!-- https://mvnrepository.com/artifact/org.springframework/spring-context-support -->
 <dependency>
     <groupId>org.springframework</groupId>
     <artifactId>spring-context-support</artifactId>
     <version>3.2.0.RELEASE</version>
 </dependency>
+
+ <!-- ==========jackson for cart (webflow)dependencies================= -->
+<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-annotations -->
+<dependency>
+    <groupId>com.fasterxml.jackson.core</groupId>
+    <artifactId>jackson-annotations</artifactId>
+    <version>2.7.3</version>
+</dependency>
+
   </dependencies>
 
 

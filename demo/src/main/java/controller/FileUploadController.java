@@ -31,7 +31,7 @@ public class FileUploadController {
 				System.out.println("IN is empty");
 				byte[] bytes = file.getBytes();
 				// Creating the directory to store file
-				String rootPath = "E:/dtimage";
+				String rootPath = "E:/1workspace/demo/src/main/webapp/WEB-INF/resources/images";
 				File dir = new File(rootPath + File.separator + file);
 				if (!dir.exists())
 					dir.mkdirs();

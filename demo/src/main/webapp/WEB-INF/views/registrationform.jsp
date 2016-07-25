@@ -22,8 +22,10 @@
 </style>
 </head>
 
-<body>
-	<h2>Customer SignUp Form</h2>
+<body style="background-color: #ccffbb;">
+		<%@include file="/WEB-INF/views/header.jsp" %>
+
+	<h2>Registration Form</h2>
 
 	<form:form method="POST" modelAttribute="customer" action="customer/signup">
 		<form:errors path="*" cssClass="errorblock" element="div" />
@@ -54,10 +56,12 @@
 				<td><form:errors path="confirmpassword" cssClass="error" /></td>
 			</tr>
 			<tr>
-				<td colspan="3"><input type="submit" value="SUBMIT"/></td>
+				<td colspan="1"><input class="btn btn-success" type="submit" value="SUBMIT"/></td>
 			</tr>
 		</table>
 	</form:form>
-
+		<br>
+<br>
+<%@include file="/WEB-INF/views/footer.jsp"%>
 </body>
 </html>

@@ -6,21 +6,23 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-		<title>Add To Cart</title>
+		<title>Cart Flow</title>
 		<link href="style.css" rel="stylesheet" type="text/css" />
 	</head>
  
 	<body>
+	<%@include file="/WEB-INF/views/header.jsp" %>
+	
 		<div class="content">
 			<fieldset>
 				<legend>Your Cart</legend>
 				<!-- for triggering webflow events using links,
 					 the eventId to be triggered is given in "href" attribute as:
 				 -->
-				<a href="${flowExecutionUrl}">Home</a>
+				
 				<div class="item">
 
-      <img src="C:/Users/koel.chowdhury/DT TTT/Images/c_pizza_2.png" alt="pizza" class="img-responsive" height = "100" width="150">
+      <img src="E:\dtimage\A.jpg" alt="pizza" class="img-responsive" height = "200" width="350">
     </div>
     
      
@@ -63,5 +65,8 @@
 				</sf:form> --%>
 			</fieldset>
 		</div>
+		<br>
+<br>
+<%@include file="/WEB-INF/views/footer.jsp"%>
 	</body>
 </html>

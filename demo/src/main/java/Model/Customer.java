@@ -12,6 +12,8 @@ import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotEmpty;
 
 
+
+
 @Table(name="CUSTOMER")
 @Entity
 public class Customer {
@@ -86,6 +88,10 @@ public void setConfirmpassword(String confirmpassword) {
 	public void setPhone(int phone) {
 		this.phone = phone;
 	}
+
+
+
+	
 	
 }
 

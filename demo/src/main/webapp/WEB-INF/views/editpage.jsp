@@ -3,6 +3,10 @@
   <%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <%@ page session="false" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -16,32 +20,19 @@
 <script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
 </head>
-<body>
-     
-     <nav class="navbar navbar-inverse">
-<div class = "container-fluid">
-<div class="navbar-header">
- 
-    
-  <ul class="nav navbar-nav">
-     	
-  		<li> <a href="index"><span class="glyphicon glyphicon-home">Home</span></a></li>
-  		
-  </ul> 
-  </div>
-     </div>
-     </nav>
-     <br>
-     <%@ page session="false"%>
-<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 
-<!DOCTYPE html>
-<html lang="en">
+
+
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Products Page</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/4.10.1/bootstrap-social.css" rel="stylesheet" >
+  
 <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">   
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <link rel="stylesheet" href="http://cdn.datatables.net/1.10.2/css/jquery.dataTables.min.css">
@@ -61,21 +52,37 @@ $(document).ready(function(){
 
   </style>
 </head>
-<body bgcolor="silver">
+<body>
 <div class="header">
-  <nav class="navbar navbar-default">
-  	<div class="container-fluid">
-        <div align="right" class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="color:#0000FF;background:#EEEEEE;">
-    	     <img src="C:\Users\user\Documents\Presentation1\logo.png" align=left> 
-      				<ul class="nav navbar-nav navbar-right">
-						<li class="active"><a href="index">Home</a></li>
-      <li  ><a href="productpage">Product</a></li>
-      <li  ><a href="signin">SignIn</a></li>
-      <li  ><a href="register">Register</a></li>
-        <li ><a href="addproduct">Add Product </a></li>
-					</ul>
-		</div>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid" >
+  <div class="navbar-header">
+ <a class="navbar-brand" href="index">FashionGyrl</a>
   </div>
+  <div align="right" class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="display:block">
+
+        <img src="E:\dtimage\logo6.png" width="70" height="70" align=left>
+    
+      
+    <ul class="nav navbar-nav navbar-right">
+<li class="active"><a href="index">Home</a></li>
+<li ><a href="productpage">Products</a></li>
+
+<li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Login
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="login">Admin</a></li>
+          <li><a href="login">Customer</a></li>
+         </ul>
+</li>
+<li ><a href="customer">Register</a></li>
+
+<!-- <li ><a href="addproduct">Add Product </a></li> --> 
+   </ul>
+  </div>
+  </div>
+ 
 </nav>
 </div>
 <div class="container">
@@ -115,10 +122,7 @@ $(document).ready(function(){
         </td>
       </form:form>
 <div align="left" style="color:#0000FF;background:pink;">
-<font size=3><a href="">About Us</a><a href="">Contact</a></font>
-   <img src="C:\Users\user\Documents\Presentation1\fb.png" width=25 height=25 align=right>
-  <img src="C:\Users\user\Documents\Presentation1\twitter.png" width=25 height=25 align=right>
-  <img src="C:\Users\user\Documents\Presentation1\g+.png" width=25 height=25 align=right>
+<%@include file="/WEB-INF/views/footer.jsp"%>
 
   </div>
 </body>

@@ -3,6 +3,8 @@
 <!DOCTYPE html>  
  <html>  
  <head>  
+ <%@include file="/WEB-INF/views/header.jsp" %>
+ 
    <title>Product table sort and filter </title>  
    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">  
    <script src="http://code.angularjs.org/1.4.8/angular.js"></script>  
@@ -48,14 +50,13 @@
  </head>  
  <body ng-app="productTableUsers">  
    <div ng-controller="myCtrl">  
-     <h3>List products</h3>  
+     <h3 ><font color="#FF0000">Product List</font></h3>  
      <div class="container-fluid">  
-       <pre>Click header link to sort, input into filter text to filter</pre>  
        <hr />  
        <table class="table table-striped">  
          <thead>  
            <tr>  
-             <th>Edit</th>
+             <th><font color="blue">Edit</font></th>
              <th>  
                <a href="" ng-click="order('id')">Id</a>  
              </th>   
@@ -68,7 +69,7 @@
          </thead>  
          <tbody>  
            <tr>  
-             <td>Filter =>></td>  
+            <u></i> <td>Filter-></td></u>
              <td> <input type="text" ng-model="search.id" /></td>  
              <td> <input type="text" ng-model="search.name" /></td>  
              <td> <input type="text" ng-model="search.category" /> </td>  
@@ -76,7 +77,7 @@
            </tr>  
            <tr ng-repeat="listed in products | orderBy:predicate:reverse | filter:paginate| filter:search" ng-class-odd="'odd'">  
              <td>  
-              <a href="productdescription"> ProductDetails   </a>  
+             <b> <a href="productdescription">ProductDetails</a></b> 
              </td>
              <td>{{ listed.id}}</td>  
              <td>{{ listed.name}}</td>  
@@ -93,7 +94,9 @@
    </div>  
    
   <!--  ${myJson}--> 
-   
+   <br>
+<br>
+<%@include file="/WEB-INF/views/footer.jsp"%>
  </body>  
  </html>
  

@@ -5,38 +5,21 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-		<title>Spring Mvc WebFlow Demo</title>
+		<title>Cart Flow</title>
 		<link href="style.css" rel="stylesheet" type="text/css" />
 	</head>
  
 	<body>
+		<%@include file="/WEB-INF/views/header.jsp" %>
+	
 		<div class="content">
 			<fieldset>
-				<legend>Confirm Details</legend>
-				<!-- for triggering webflow events using links,
-					 the eventId to be triggered is given in "href" attribute as:
-				 -->
-				<a href="${flowExecutionUrl}">Home</a><br /><br />
-				<p>You have entered </p>
-				<sf:form modelAttribute="userBean">
-					<sf:label path="qty">Quantity:</sf:label>${userBean.getQty()}
-					<input name="_eventId_submit" type="submit" value="Confirm Details" />
-				</sf:form>	
-				
-				<%-- <sf:form modelAttribute="userBean">
-					<sf:label path="userId">UserName:</sf:label>${userBean.userId}
-					<br /><br />
-					<sf:label path="email">Email Id:</sf:label>${userBean.email}
-					<br /><br />
-					<sf:label path="age">Age :</sf:label>${userBean.age}
-					<br /><br />
-					<!-- for triggering webflow events using form submission,
-					 the eventId to be triggered is given in "name" attribute as:
-					--> --%>
-					<!-- <input name="_eventId_edit" type="submit" value="Edit" /> 
-					<input name="_eventId_submit" type="submit" value="Confirm Details" /><br /> -->
-				<%-- </sf:form> --%>
+				<img src="E:\dtimage\ty.jpg" width="900" height="400">
+			
 			</fieldset>
 		</div>
+				<br>
+<br>
+<%@include file="/WEB-INF/views/footer.jsp"%>
 	</body>
 </html>

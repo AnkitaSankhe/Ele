@@ -33,20 +33,38 @@ $(document).ready(function(){
 <title>Insert title here</title>
 </head>
 <body bgcolor="pink">
+<div class="header">
 <nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="index">ElegantShop</a>
-
-    </div>
-    <ul class="nav navbar-nav navbar-right">
-      <li class="active"><a href="index">Home</a></li>
-      <li  ><a href="productpage">Product</a></li>
-      <li  ><a href="signin">SignIn</a></li>
-       <li  ><a href="/addProduct">Add Product</a></li>
-    </ul>
+  <div class="container-fluid" >
+  <div class="navbar-header">
+ <a class="navbar-brand" href="index">FashionGyrl</a>
   </div>
-</nav> 
+  <div align="right" class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="display:block">
+
+        <img src="E:\dtimage\logo6.png" width="70" height="70" align=left>
+    
+      
+    <ul class="nav navbar-nav navbar-right">
+<li class="active"><a href="index">Home</a></li>
+<li class="active"><a href="addproduct">AddProduct</a></li>
+
+<li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Login
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="login">Admin</a></li>
+          <li><a href="login">Customer</a></li>
+         </ul>
+</li>
+<li ><a href="customer">Register</a></li>
+
+<!-- <li ><a href="addproduct">Add Product </a></li> --> 
+   </ul>
+  </div>
+  </div>
+ 
+</nav>
+</div>
 
    <div class="table-responsive">
    <table id="myTable" bgcolor="yellow">
@@ -60,7 +78,7 @@ $(document).ready(function(){
             <th>PRICE</th> 
             <th>EDIT</th>
             <th>DELETE</th> 
-            <th>Details</th>
+            
           </tr>  
         </thead>  
 </tr>
@@ -73,7 +91,6 @@ $(document).ready(function(){
 			<td>${p.price}</td>
 			<td><a href="edit/${p.id}" class="btn btn-primary">Edit</a></td>
 		<td><a href="delete/${p.id}" class="btn btn-primary">Delete</a></td>
-		<td><a href="details/${p.id}" class="btn btn-primary">Details</a></td>
 		</tr>
 	</c:forEach>
 	
@@ -81,26 +98,26 @@ $(document).ready(function(){
 	</table>
 </div>
 
-<nav class="navbar navbar-inverse ">
+<nav class="navbar navbar-inverse navbar-fixed-bottom">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="index">ElegantShop</a>
+      <a class="navbar-brand" href="index">FashionGyrl</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">About US</a></li>
-        <li class="active"><a href="#">CONTACT</a></li>
-      </ul>
-            <ul class="nav navbar-nav navbar-right">
-       
-      <li><a onclick="" class="btn btn-social-icon btn-lg btn-facebook"><i class="fa fa-facebook"></i></a></li>
-      <li><<a onclick="" class="btn btn-social-icon btn-lg btn-dropbox"><i class="fa fa-twitter"></i></a></li>
-      <li> <a onclick="" class="btn btn-social-icon btn-lg btn-flickr"><i class="fa fa-flickr"></i></a></li>
-    </ul> 
+<li ><a href="aboutus">About US</a></li>
+<li class="active"><a href="recommendfreind">Recommend To Friend</a></li>
+        </ul>
+ <ul class="nav navbar-nav navbar-right">
+ <li><a onclick="" class="btn btn-social-icon btn-lg btn-facebook"><i class="fa fa-facebook"></i></a></li>
+      <li><a onclick="" class="btn btn-social-icon btn-lg btn-dropbox"><i class="fa fa-google-plus"></i></a></li>
+      <li><a onclick="" class="btn btn-social-icon btn-lg btn-flickr"><i class="fa fa-twitter" ></i></a></li>
+    </ul>
   </div>
 </nav>
+
 </body>
 
 
 </html>
 
-          
+         

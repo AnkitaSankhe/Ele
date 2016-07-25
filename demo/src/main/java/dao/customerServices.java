@@ -1,8 +1,9 @@
 package dao;
+
 import Model.Customer;
 import Model.Product;
 
-
+import java.io.IOException;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,9 +23,11 @@ public class customerServices {
 	@Autowired
     private CustomerDAOImpl customerDAO;
  
-    public void setPersonDAO(CustomerDAOImpl customerDAO) {
+    public void setCustomerDAO(CustomerDAOImpl customerDAO) {
         this.customerDAO = customerDAO;
     }
+
+   
  
    
    @Transactional
@@ -56,6 +59,13 @@ public class customerServices {
     {
         this.customerDAO.removeCustomer(id);
     }
+
+
+	public Customer getCustomerByName(String name) {
+		// TODO Auto-generated method stub
+		 return this.customerDAO.getCustomerByName(name);
+	}
+	
  
 }
 

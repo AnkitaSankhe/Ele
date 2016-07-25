@@ -6,7 +6,18 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Success</title>
 </head>
-<body>
-FileUploaded Successfully
+
+<body style="background-color: #ccffbb;">
+<%@include file="/WEB-INF/views/header.jsp" %>
+FileName: "
+<strong> ${filename} </strong>" - Uploaded Successfully
+
+
+<br>
+<br>
+<%@include file="/WEB-INF/views/footer.jsp"%>
+
 </body>
+
+
 </html>

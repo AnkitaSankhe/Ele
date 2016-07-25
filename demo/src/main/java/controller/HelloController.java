@@ -45,6 +45,12 @@ import com.google.gson.Gson;
 	        this.productService = ps;
 	    }
 		
+		@RequestMapping("/aboutus")
+	    public String aboutus()
+	    {
+	    	return "aboutus";
+	    }
+		
 		@RequestMapping("/productdescription")
 	    public String productDetails()
 	    {
@@ -80,7 +86,7 @@ import com.google.gson.Gson;
 		        mailSender.send(email);
 		         
 		        // forwards to the view named "Result"
-		        return "redirect:/productTableUsers";
+		        return "sent";
 		 }
 		
 		@RequestMapping("/")

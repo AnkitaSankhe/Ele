@@ -134,13 +134,23 @@ $(document).ready(function(){
 <!--          <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" /> -->    
     </form>
          <br/> <br/>
-<font size=3><a href="">About Us</a><a href="">Contact</a></font>
-   <img src="C:\Users\user\Documents\Presentation1\fb.png" width=25 height=25 align=right>
-  <img src="C:\Users\user\Documents\Presentation1\twitter.png" width=25 height=25 align=right>
-  <img src="C:\Users\user\Documents\Presentation1\g+.png" width=25 height=25 align=right>
-
+<nav class="navbar navbar-inverse navbar-fixed-bottom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="index">ElegantShop</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">About US</a></li>
+        <li class="active"><a href="#">CONTACT</a></li>
+        </ul>
+            <ul class="nav navbar-nav navbar-right">
+       
+      <li><a onclick="" class="btn btn-social-icon btn-lg btn-facebook"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+      <li><<a onclick="" class="btn btn-social-icon btn-lg btn-dropbox"><i class="fa fa-dropbox"></i></a></li>
+      <li> <a onclick="" class="btn btn-social-icon btn-lg btn-flickr"><i class="fa fa-flickr"></i></a></li>
+    </ul>
   </div>
- 
+</nav>
+
 </body>
 </html>
-    

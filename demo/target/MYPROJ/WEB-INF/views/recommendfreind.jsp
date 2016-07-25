@@ -41,6 +41,8 @@
             <button type="submit" value="Submit" class="btn btn-custom pull-right">Send</button>
         </div>
     </div>
+     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" /> 
+    
 </form>
         </div><!-- End of Modal body -->
         </div><!-- End of Modal content -->

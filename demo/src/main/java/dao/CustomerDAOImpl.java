@@ -69,6 +69,13 @@ public class CustomerDAOImpl {
 	        }
 	        logger.info("Customer deleted successfully, Customer details="+p);
 	    }
+		public Customer getCustomerByName(String name) {
+			// TODO Auto-generated method stub
+			 Session session = this.sessionFactory.getCurrentSession();      
+		        Customer c = (Customer) session.load(Customer.class, new String(name));
+		        logger.info("Product loaded successfully, Person details="+c);
+		        return c;
+		}
 	
 	
 }

@@ -55,7 +55,7 @@ public class SignUpController {
 	          this.customerService.updateCustomer(c);
 	    		
 	    	}
-			return "login";
+			return "redirect:/login";
 			}
 
 

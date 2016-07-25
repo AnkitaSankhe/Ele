@@ -16,16 +16,6 @@ http://www.springframework.org/schema/security/spring-security-4.0.xsd">
 		<form-login login-page="/login" default-target-url="/addproduct" login-processing-url="/perform_login" authentication-failure-url="/productTableUsers" always-use-default-target="false"/>
 </http>
 		
-	<!-- <form-login  
-		   login-page="/signin" 
-		    default-target-url="/productTable" 
-			authentication-failure-url="/index" 
-			 username-parameter="sa"
-			password-parameter=""/>   -->
-	<!-- <logout logout-success-url="/login?logout"  />   -->
-		<!-- enable csrf protection -->
-	<!-- 	 <csrf/> 
-	 --> 
 
 	<authentication-manager>
 	  <authentication-provider>
